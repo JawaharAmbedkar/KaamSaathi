@@ -11,6 +11,7 @@ import complaintRoutes from './routes/complaints.js'
 import assistantRoutes from './routes/assistant.js'
 
 export const app = express()
+export default app
 
 app.disable('x-powered-by')
 app.use(helmet())
