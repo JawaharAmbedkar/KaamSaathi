@@ -1,271 +1,426 @@
-# KaamSaathi
+# 🤝 KaamSaathi
+### Your Work. Your Rights. Your Companion.
 
-> **Your Work, Your Rights, Your Companion**
+**An AI-powered multilingual companion empowering India's gig workers and daily-wage workers with smarter earnings management, accessible information, and workplace support.**
 
-KaamSaathi is a multilingual web application concept built to support India's gig workers, delivery partners, drivers, and daily-wage workers. It brings everyday work tools and helpful starting points together: track what you earn and spend, find official worker-resource portals, ask for simple explanations, and prepare a workplace complaint letter.
+KaamSaathi helps delivery partners, drivers, and informal workers manage their work more easily through AI-powered assistance, earnings tracking, official worker resources, document explanations, and complaint drafting — all in one simple, accessible platform.
 
-The product is designed around a simple idea: workers should be able to understand their work and options without having to navigate a complicated interface. Its dark, mobile-friendly workspace uses a calm visual style, plain language, and clear notes about what is demo content, what comes from an AI service, and where official information should be checked.
+<p align="center">
+  <strong>Built with ❤️ for the people who keep India moving.</strong>
+</p>
 
-## At a glance
+---
 
-- **Frontend:** React, JavaScript, Vite, Tailwind CSS, React Router, Framer Motion, Lucide React, Recharts
-- **Backend:** Node.js, Express, REST API
-- **Database:** PostgreSQL with Prisma ORM; Neon PostgreSQL is supported
-- **Authentication:** bcrypt password hashing and signed JWTs stored in HTTP-only cookies
-- **AI:** Gemini API through the backend; the key stays in the backend environment
-- **Languages:** English, Hindi, and Punjabi in the assistant interface
+## 📌 About the Project
 
-## Features
+Millions of workers rely on daily earnings but often face challenges understanding their finances, finding relevant government resources, navigating documents, and raising workplace concerns.
 
-### Dashboard
+**KaamSaathi aims to make these everyday tasks simpler.**
 
-The dashboard greets the signed-in worker, summarizes recorded income and expenses, calculates take-home earnings, plots a seven-day money chart, and surfaces shortcuts to common tasks. Its totals come from the worker's transaction records.
+Designed with a clean, mobile-friendly interface and multilingual AI assistance, KaamSaathi brings essential tools together in one place. Its goal is to make useful information easier to understand and everyday work management less stressful.
 
-### Earnings tracker
+## ✨ Features
 
-- Add income and expense entries with an amount, category, date, and optional note.
-- See totals for earned, spent, and net earnings.
-- Filter the ledger by all transactions, income, or expenses.
-- Remove entries and export records as a CSV file.
-- Keep transactions associated with the account that created them.
+### 📊 Smart Earnings Tracker
+- Record daily income and expenses.
+- Categorize transactions and add notes.
+- Calculate total earnings, expenses, and net earnings.
+- Visualize financial trends with interactive charts.
+- Filter transactions and export records to CSV.
+- Keep personal financial records associated with the account that created them.
 
-### AI Saathi
+### 🤖 AI Saathi — Your Personal AI Assistant
+- Ask questions in English, Hindi, and Punjabi.
+- Get simple explanations and practical guidance.
+- Understand workplace-related information more easily.
+- Receive AI-powered assistance through the Gemini API.
+- Use clearly labeled demo responses when live AI is not configured.
 
-The assistant accepts questions in English, Hindi, or Punjabi, and can give plain-language general guidance about work and records. With `GEMINI_API_KEY` configured, messages are sent through the backend to Gemini. Without a key, the app uses clearly identified demo guidance instead of claiming a live AI response.
+### 🏛️ Government Schemes & Worker Resources
+- Discover useful worker-resource portals.
+- Access official websites for registration, employment, and welfare information.
+- Explore resources such as e-Shram, Maandhan, and National Career Service.
+- Find starting points for researching benefits and eligibility.
 
-AI output may be incomplete or incorrect. Treat it as a starting point, not a legal, financial, or emergency service. Do not send sensitive personal information.
+### 🛡️ Safety & Workers' Rights
+- Explore practical workplace and road safety guidance.
+- Find useful worker-support resources.
+- Access established legal-aid and emergency information sources.
+- Understand where to seek additional help.
 
-### Government schemes and support
+### 📄 AI Document Assistant
+- Submit text from a document for a simpler explanation.
+- Understand difficult terminology.
+- Request plain-language summaries and translations.
+- Receive assistance through the configured AI service.
 
-Search and filter a directory of worker-related starting points, with links to official portals including e-Shram, Maandhan, myScheme, PM SVANidhi, Skill India Digital Hub, and the Apprenticeship Training Portal. The app intentionally directs people to those official sources instead of claiming to verify their personal eligibility or promising benefits.
+### 📝 Complaint Letter Generator
+- Prepare letters for missing payments, unfair deductions, account deactivation, and workplace concerns.
+- Generate structured complaint drafts using user-provided information.
+- Edit, save, reopen, and delete drafts.
+- Download complaint letters as plain text.
 
-### Safety and rights
+### 🔐 Secure Authentication
+- User registration and login.
+- Secure password hashing with bcrypt.
+- JWT-based authentication using HTTP-only cookies.
+- Protected API endpoints.
+- User-specific records and access controls.
 
-Read practical, general safety reminders and follow links to official or established resources, including India's 112 emergency information, e-Shram, and NALSA. For urgent danger, contact local emergency services. Workplace rights and remedies depend on individual circumstances and current local rules; seek qualified local advice.
+### 🎨 Modern User Experience
+- Premium dark-themed interface.
+- Emerald-green accents and subtle glassmorphism.
+- Smooth animations and interactive elements.
+- Responsive layouts for desktop and mobile.
+- Clean navigation and intuitive workflows.
 
-### Document assistant
+---
 
-Provide plain text from a document to request a simpler explanation. The interface supports `.txt` and `.md` file selection or pasted text, and reminds users to remove personal identifiers first. The backend sends submitted text to Gemini only when configured. In demo mode, the app explains that it did not perform a real AI analysis.
+## 🛠️ Tech Stack
 
-Only submit text that you are comfortable sending to the configured AI provider. The service does not persist uploaded files, but submitted text is included in the AI request when that service is enabled.
+| Technology | Purpose |
+|---|---|
+| React | Frontend user interface |
+| JavaScript | Application logic |
+| Vite | Frontend development and build tooling |
+| Tailwind CSS | Responsive styling and UI design |
+| React Router | Client-side navigation |
+| Framer Motion | Animations and transitions |
+| Lucide React | Icons |
+| Recharts | Earnings visualizations |
+| Node.js | Backend runtime |
+| Express.js | REST API and server-side logic |
+| PostgreSQL | Relational database engine |
+| Neon | Serverless PostgreSQL database hosting |
+| Prisma ORM | Database access, schema management, and migrations |
+| bcrypt | Password hashing |
+| JWT | Authentication |
+| Gemini API | AI-powered assistance |
 
-### Complaint-letter helper
+---
 
-Prepare a structured letter for issues such as missing payments, deductions, account deactivation, or workplace safety. The generated template is editable, can be saved to the signed-in account, reopened, updated, deleted, and downloaded as plain text. It helps organize user-provided facts; it does not file or send the complaint, and it is not legal advice.
+## 🏗️ Project Architecture
 
-### Accounts and privacy
-
-Create an account, sign in, view the authenticated profile, and sign out. Passwords are hashed with bcrypt. Authentication uses a signed JWT in an HTTP-only, SameSite cookie. Protected API operations filter database records by the authenticated user.
-
-### Demo mode
-
-Choose **Explore the demo** on the sign-in page to explore without the API or a database account. Demo profile and sample records are stored in browser local storage on that device. They are not sent to Neon, do not represent a real signed-in account, and are separate from backend records.
-
-## Project structure
+KaamSaathi uses a separated frontend and backend architecture.
 
 ```text
-Projects/
-├── frontend/                 # React and Vite application
+kaamsaathi/
+├── frontend/
 │   ├── src/
-│   └── .env.example
-├── backend/                  # Express REST API
+│   ├── public/
+│   ├── .env.example
+│   └── package.json
+│
+├── backend/
+│   ├── src/
 │   ├── prisma/
 │   │   ├── migrations/
 │   │   └── schema.prisma
-│   ├── src/
 │   ├── test/
-│   └── .env.example
+│   ├── .env.example
+│   └── package.json
+│
+├── .gitignore
 └── README.md
 ```
 
-The frontend and backend are separate applications and run in separate terminals during development.
+**Frontend:** Handles the user interface, navigation, forms, charts, and API communication.
 
-## Run locally
+**Backend:** Handles authentication, business logic, database operations, AI integrations, validation, and protected resources.
 
-### Requirements
+**Database:** Neon hosts the PostgreSQL database, while Prisma manages database queries and migrations.
 
-- Node.js 20 or newer
+---
+
+## 🗄️ Database — Neon PostgreSQL
+
+KaamSaathi uses **[Neon](https://neon.tech/)** as its cloud database platform.
+
+Neon provides managed, serverless PostgreSQL, allowing the application to store and retrieve data without requiring a self-managed database server.
+
+### How the database works
+
+- **Neon PostgreSQL:** Stores application data, including user accounts, earnings transactions, and saved complaint drafts.
+- **Prisma ORM:** Connects the Express backend to the database and provides structured database queries.
+- **Database migrations:** Keep the database schema synchronized with Prisma models.
+- **Connection pooling:** Neon's pooled connection string can help manage database connections efficiently.
+- **Environment configuration:** Database credentials remain on the backend and are never exposed to the browser.
+
+### Database Architecture
+
+```text
+React Frontend
+      │
+      ▼
+Express.js REST API
+      │
+      ▼
+Prisma ORM
+      │
+      ▼
+Neon PostgreSQL
+      │
+      ├── User Accounts
+      ├── Earnings & Expenses
+      └── Complaint Drafts
+```
+
+The frontend communicates with the Express backend, which performs database operations through Prisma. Protected operations must verify authentication and enforce record ownership.
+
+### Why Neon?
+
+- Cloud-hosted PostgreSQL without managing your own database server.
+- PostgreSQL compatibility with familiar SQL tools and libraries.
+- Pooled connections for suitable application workloads.
+- Integration with Prisma and Node.js.
+- A convenient database hosting option for development and deployment.
+
+Learn more: [Neon Documentation](https://neon.tech/docs)
+
+---
+
+## ⚙️ Getting Started
+
+Follow these steps to run KaamSaathi locally.
+
+### Prerequisites
+
+Make sure you have installed:
+
+- [Node.js 20 or newer](https://nodejs.org/)
 - npm
-- A PostgreSQL database, either local PostgreSQL or Neon
-- A Gemini API key only if you want to try live AI responses
+- A [Neon PostgreSQL](https://neon.tech/) account or another PostgreSQL instance
+- A Gemini API key for live AI functionality (optional)
 
-### 1. Configure the backend
+### 1. Clone the Repository
 
-Open a terminal in the backend directory:
+```bash
+git clone YOUR_REPOSITORY_URL
+cd kaamsaathi
+```
+
+Replace `YOUR_REPOSITORY_URL` with your actual GitHub repository URL.
+
+### 2. Configure the Backend
+
+```bash
+cd backend
+npm install
+```
+
+Create a local environment file by copying `.env.example` to `.env`.
+
+On Windows PowerShell:
 
 ```powershell
-cd D:\Projects\backend
 Copy-Item .env.example .env
 ```
 
-Edit `backend/.env` and set:
+Configure the following variables in `backend/.env`:
 
-- `DATABASE_URL` — PostgreSQL runtime connection string.
-- `DIRECT_URL` — direct PostgreSQL connection string for migrations.
-- `JWT_SECRET` — a private, random secret of at least 32 characters.
-- `FRONTEND_URL` — for local development, `http://localhost:5173`.
-- `GEMINI_API_KEY` — optional; keep it only in the backend `.env`.
+```env
+DATABASE_URL="your_neon_pooled_connection_string"
+DIRECT_URL="your_neon_direct_connection_string"
 
-Generate a suitable JWT secret with:
+JWT_SECRET="your_long_random_secret"
+FRONTEND_URL="http://localhost:5173"
+PORT=4000
 
-```powershell
-node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+GEMINI_API_KEY=""
+GEMINI_MODEL="your_supported_gemini_model"
+
+COOKIE_SECURE=false
 ```
 
-Do not put database credentials, JWT secrets, or Gemini API keys in frontend environment files, source code, screenshots, or version control. The repository ignores local `.env` files.
+**Important:**
 
-### 2. Configure Neon (or local PostgreSQL)
+- `DATABASE_URL` should contain the pooled Neon connection string when using Neon's connection pooler.
+- `DIRECT_URL` should contain the direct, unpooled connection string for the same database if your Prisma setup uses it for migrations.
+- `JWT_SECRET` must be a long, random, private value.
+- `GEMINI_API_KEY` is optional if you want to use demo responses instead of live AI.
 
-Neon is PostgreSQL-compatible, so no application code change is needed.
+Use the exact variable names expected by your Prisma schema and backend configuration.
 
-For Neon:
+### 3. Initialize the Database
 
-1. Create or choose a Neon project and database.
-2. Copy the **pooled** connection string into `DATABASE_URL`.
-3. Copy the **direct/unpooled** connection string for the same database into `DIRECT_URL`.
-4. Keep Neon’s SSL requirement, usually `sslmode=require`.
+From the `backend` directory, run:
 
-Use the connection string for the database you actually intend to use. If you change database URLs, Prisma will target that database when migrations run.
-
-For local PostgreSQL, use the same database URL for both variables if your local setup does not use a pooler.
-
-### 3. Install dependencies and initialize the database
-
-Still in `D:\Projects\backend`, run:
-
-```powershell
-npm.cmd install
+```bash
 npx prisma migrate deploy
 npx prisma generate
 ```
 
-`migrate deploy` creates or updates the tables in the configured database. You need to run it when setting up a database or applying new migrations—not every time you start the app.
+Prisma applies the existing migrations to your configured Neon database and generates the Prisma client.
 
-### 4. Start the backend
+Make sure your connection strings point to the intended database before running migrations.
 
-In the backend terminal:
+### 4. Start the Backend
 
-```powershell
-npm.cmd run dev
+```bash
+npm run dev
 ```
 
-Keep the terminal open. The API listens on port `4000` by default. Check:
+The backend runs on port `4000` by default.
 
-```text
-http://localhost:4000/api/health
-```
+Check the health endpoint:
 
-Expected response:
+**http://localhost:4000/api/health**
+
+A successful response looks like:
 
 ```json
-{"status":"ok"}
+{
+  "status": "ok"
+}
 ```
 
-### 5. Start the frontend
+### 5. Start the Frontend
 
-Open a **second** terminal:
+Open a second terminal:
 
-```powershell
-cd D:\Projects\frontend
-npm.cmd install
-npm.cmd run dev
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-Open the Vite URL printed in that terminal, usually `http://localhost:5173`. Use the same local origin configured in `FRONTEND_URL`; the frontend development server proxies `/api` to `http://localhost:4000`.
+Open the local URL provided by Vite, usually:
 
-On Windows PowerShell, `npm.cmd` avoids execution-policy errors that can occur with the `npm.ps1` shim. In Command Prompt, `npm` may work normally.
+**http://localhost:5173**
 
-### 6. Test the real application
+If the frontend uses a Vite `/api` proxy, requests are forwarded to the backend running on port `4000`.
 
-1. Ensure both backend and frontend terminals are still running.
-2. Open `http://localhost:5173`.
-3. If you are in demo mode, sign out, reload, and choose **Create an account** to register through the API.
-4. Add income and expense entries, refresh the page, and confirm the entries remain.
-5. Export the ledger to CSV.
-6. Create and save a complaint draft, refresh, and confirm it remains available.
-7. Ask AI Saathi a basic question. A configured Gemini key enables a live request; without one, the assistant returns clearly identified demo guidance.
-8. Try document explanation with non-sensitive sample text. Remove names, account numbers, identity numbers, and other sensitive details before submitting.
+### 6. Enable Live AI (Optional)
 
-To inspect database rows during development:
+Add a valid Gemini API key to `backend/.env`:
 
-```powershell
-cd D:\Projects\backend
-npx prisma studio
+```env
+GEMINI_API_KEY="your_actual_api_key"
+GEMINI_MODEL="your_supported_gemini_model"
 ```
 
-Prisma Studio connects to the database configured in `backend/.env`. Be careful when viewing or editing real user records.
+Restart the backend after updating the environment variables.
 
-## Environment variables
+Without a configured API key, the application uses clearly identified demo responses where supported.
 
-See [`backend/.env.example`](./backend/.env.example) and [`frontend/.env.example`](./frontend/.env.example).
+---
 
-Backend:
+## 🔌 API Overview
 
-| Variable | Purpose |
-| --- | --- |
-| `DATABASE_URL` | PostgreSQL application connection; use Neon’s pooled URL when appropriate. |
-| `DIRECT_URL` | Direct PostgreSQL connection used by Prisma for migrations. |
-| `JWT_SECRET` | Private signing secret; use a long, random value. |
-| `FRONTEND_URL` | Allowed frontend origin for credentialed API requests. |
-| `PORT` | API port; defaults to `4000`. |
-| `GEMINI_API_KEY` | Optional private Gemini credential. Leave blank for demo AI responses. |
-| `GEMINI_MODEL` | Gemini model name used by the backend; defaults to `gemini-flash-latest`. |
-| `COOKIE_SECURE` | Set to `true` when serving over HTTPS in production. |
+The backend exposes REST API endpoints for the application's core workflows.
 
-Frontend:
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/health` | Check API status |
+| POST | `/api/auth/register` | Register an account |
+| POST | `/api/auth/login` | Authenticate a user |
+| POST | `/api/auth/logout` | End the session |
+| GET | `/api/auth/me` | Get the authenticated profile |
+| GET | `/api/transactions` | Retrieve transactions |
+| POST | `/api/transactions` | Create a transaction |
+| DELETE | `/api/transactions/:id` | Delete an owned transaction |
+| GET | `/api/complaints` | Retrieve saved complaint drafts |
+| POST | `/api/complaints` | Create a complaint draft |
+| PUT | `/api/complaints/:id` | Update a complaint draft |
+| DELETE | `/api/complaints/:id` | Delete a complaint draft |
+| POST | `/api/assistant/chat` | Request AI assistance |
+| POST | `/api/assistant/document` | Request document-text explanation |
 
-| Variable | Purpose |
-| --- | --- |
-| `VITE_API_URL` | Optional API base URL when the frontend is not using the Vite `/api` proxy. |
+Authenticated endpoints require a valid session. Protected operations must enforce user ownership so users cannot access another user's private records.
 
-## API routes
+Refer to the backend implementation for the exact request bodies, validation rules, and response formats.
 
-| Method | Route | Purpose | Authentication |
-| --- | --- | --- | --- |
-| `GET` | `/api/health` | Check API availability. | No |
-| `POST` | `/api/auth/register` | Create an account. | No |
-| `POST` | `/api/auth/login` | Sign in and issue a session cookie. | No |
-| `POST` | `/api/auth/logout` | Clear the session cookie. | No |
-| `GET` | `/api/auth/me` | Get the signed-in profile. | Yes |
-| `GET`, `POST` | `/api/transactions` | List or create the user's transactions. | Yes |
-| `DELETE` | `/api/transactions/:id` | Delete a transaction owned by the user. | Yes |
-| `GET`, `POST` | `/api/complaints` | List or create the user's complaint drafts. | Yes |
-| `PUT`, `DELETE` | `/api/complaints/:id` | Update or delete an owned complaint draft. | Yes |
-| `POST` | `/api/assistant/chat` | Request an assistant response. | Yes |
-| `POST` | `/api/assistant/document` | Request a document-text explanation. | Yes |
+---
 
-## Checks
+## 🔒 Security & Privacy
 
-Run these from the relevant project folder:
+KaamSaathi incorporates security measures designed to protect user accounts and records:
 
-```powershell
-# Backend API smoke tests
-cd D:\Projects\backend
-npm.cmd test
+- Passwords are hashed using bcrypt.
+- Authentication uses signed JWTs in HTTP-only cookies.
+- Protected operations are scoped to the authenticated user.
+- The backend uses Helmet, CORS allowlisting, rate limiting, and request validation.
+- Sensitive configuration is stored in environment variables.
+- Uploaded documents and submitted text must be handled carefully.
 
-# Backend JavaScript syntax check
-npm.cmd run build
+**Security best practices:**
 
-# Frontend production build
-cd D:\Projects\frontend
-npm.cmd run build
+- Never commit API keys, database credentials, JWT secrets, or real user data to GitHub.
+- Use HTTPS and configure secure cookies before production deployment.
+- Restrict CORS to trusted frontend origins.
+- Verify ownership before reading, modifying, or deleting private records.
+- Avoid submitting sensitive personal information to AI services.
+
+Review the implementation and production configuration before describing any security control as fully enforced.
+
+---
+
+## 🧪 Testing
+
+Run backend tests from the `backend` directory:
+
+```bash
+npm test
 ```
 
-## Security and responsible use
+Run the configured backend build or validation script:
 
-- Passwords are hashed; authentication cookies are HTTP-only and SameSite.
-- Protected transaction and complaint operations scope database queries to the authenticated user.
-- The API uses Helmet, CORS allowlisting, request rate limiting, input validation, and bounded JSON request sizes.
-- Use HTTPS and set `COOKIE_SECURE=true` when deployed.
-- Keep secrets in backend environment variables and rotate them if exposed.
-- Never treat generated AI text as authoritative legal, financial, safety, or eligibility advice.
-- Verify scheme rules and applications on the linked official government portals.
-- KaamSaathi is an independent application, not a government service. It does not submit scheme applications or send complaints on the user's behalf.
+```bash
+npm run build
+```
 
-## Current scope and limitations
+Build the frontend for production:
 
-- Scheme information is a concise directory of official links, not a live government eligibility checker.
-- The complaint helper prepares a letter for the user to review; it does not submit or send it.
-- Demo AI is illustrative and is not a real Gemini response.
-- AI requests depend on network availability, API credentials, provider availability, and the provider's terms.
-- The application is a development-stage project. Review operations, privacy notices, deployment settings, and applicable legal requirements before launching it to real users.
+```bash
+cd frontend
+npm run build
+```
+
+Verify that the relevant scripts exist in each `package.json`.
+
+Before deployment, test authentication, transaction persistence, user ownership, complaint drafting, AI provider failures, and responsive layouts.
+
+---
+
+## 🌱 Future Improvements
+
+Potential areas for further development include:
+
+- 🎙️ Voice-based AI assistance for workers with limited literacy.
+- 🌐 More Indian languages and regional-language support.
+- 🏛️ Verified and regularly updated government scheme information.
+- 🎯 Personalized benefit discovery.
+- 📶 Offline-friendly workflows for unreliable internet connections.
+- 📱 Progressive Web App (PWA) support.
+- 📄 Improved document OCR and multilingual document processing.
+- 🛡️ Additional worker-safety resources and location-aware support.
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and feedback are welcome!
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Test your implementation.
+5. Open a pull request describing your changes.
+
+Please avoid committing credentials, private user information, or unverified government-benefit claims.
+
+---
+
+## 💚 Our Mission
+
+We believe technology should make everyday life easier for everyone — especially the people whose hard work keeps our communities running.
+
+KaamSaathi is a step toward making useful information, financial awareness, and workplace support more accessible to India's gig and informal workforce.
+
+**Built with purpose. Powered by technology. Designed for people.**
+
+---
+
+<p align="center">
+  <strong>KaamSaathi — Your Work. Your Rights. Your Companion.</strong>
+</p>
